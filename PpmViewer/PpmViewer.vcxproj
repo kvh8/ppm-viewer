@@ -284,6 +284,7 @@
     <ClInclude Include="GreyscaleEffect.hpp" />
     <ClInclude Include="HighContrastEffect.hpp" />
     <ClInclude Include="ImageEffect.hpp" />
+    <ClInclude Include="MirrorEffect.hpp" />
     <ClInclude Include="NegateBlueEffect.hpp" />
     <ClInclude Include="NegateGreenEffect.hpp" />
     <ClInclude Include="NegateRedEffect.hpp" />
@@ -294,6 +295,7 @@
     <ClInclude Include="RemoveBlueEffect.hpp" />
     <ClInclude Include="RemoveGreenEffect.hpp" />
     <ClInclude Include="RemoveRedEffect.hpp" />
+    <ClInclude Include="VerticalFlipEffect.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="blocks.ppm" />

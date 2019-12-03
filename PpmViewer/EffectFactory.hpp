@@ -8,6 +8,8 @@
 #include "GreyscaleEffect.hpp"
 #include "RandomNoiseEffect.hpp"
 #include "HighContrastEffect.hpp"
+#include "MirrorEffect.hpp"
+#include "VerticalFlipEffect.hpp"
 
 enum class ImageEffectType
 {
@@ -20,6 +22,8 @@ enum class ImageEffectType
 	Greyscale,
 	RandomNoise,
 	HighContrast,
+	Mirror,
+	VerticalFlip,
 };
 
 class EffectFactory
@@ -63,6 +67,14 @@ public:
 
 		case ImageEffectType::HighContrast:
 			return new HighContrastEffect{};
+			break;
+
+		case ImageEffectType::VerticalFlip:
+			return new VerticalFlipEffect{};
+			break;
+
+		case ImageEffectType::Mirror:
+			return new MirrorEffect{};
 			break;
 
 		default: 
