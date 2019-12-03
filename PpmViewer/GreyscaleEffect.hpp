@@ -1,7 +1,7 @@
 #pragma once
 #include "PpmDocument.hpp"
 #include "ImageEffect.hpp"
-class NegateBlueEffect : public ImageEffect
+class GreyscaleEffect : public ImageEffect
 {
 public:
 	virtual void applyEffect(PpmDocument& doc)
@@ -11,9 +11,17 @@ public:
 			for (int j = 0; j < doc.getWidth(); j++)
 			{
 				Pixel& p = doc[i][j];
-				p.blue = (255 - p.blue);
+				int average = 0;
 
-				//not necessary as we're using references but it makes our intent more clear
+				average = (p.red + p.green + p.blue) / 3;
+
+				if (p.red != average || p.green != average || p.blue != average)
+				{
+					p.red = average;
+					p.green = average;
+					p.blue = average;
+				}
+				
 				doc[i][j] = p;
 			}
 		}

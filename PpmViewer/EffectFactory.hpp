@@ -3,6 +3,11 @@
 #include "RemoveGreenEffect.hpp"
 #include "RemoveBlueEffect.hpp"
 #include "NegateRedEffect.hpp"
+#include "NegateGreenEffect.hpp"
+#include "NegateBlueEffect.hpp"
+#include "GreyscaleEffect.hpp"
+#include "RandomNoiseEffect.hpp"
+#include "HighContrastEffect.hpp"
 
 enum class ImageEffectType
 {
@@ -12,6 +17,9 @@ enum class ImageEffectType
 	NegateRed,
 	NegateGreen,
 	NegateBlue,
+	Greyscale,
+	RandomNoise,
+	HighContrast,
 };
 
 class EffectFactory
@@ -35,6 +43,26 @@ public:
 
 		case ImageEffectType::NegateRed:
 			return new NegateRedEffect{};
+			break;
+
+		case ImageEffectType::NegateGreen:
+			return new NegateGreenEffect{};
+			break;
+
+		case ImageEffectType::NegateBlue:
+			return new NegateBlueEffect{};
+			break;
+
+		case ImageEffectType::Greyscale:
+			return new GreyscaleEffect{};
+			break;
+
+		case ImageEffectType::RandomNoise:
+			return new RandomNoiseEffect{};
+			break;
+
+		case ImageEffectType::HighContrast:
+			return new HighContrastEffect{};
 			break;
 
 		default: 

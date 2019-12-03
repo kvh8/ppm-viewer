@@ -281,6 +281,8 @@
     <ClInclude Include="FL\platform.H" />
     <ClInclude Include="FL\win32.H" />
     <ClInclude Include="FL\x.H" />
+    <ClInclude Include="GreyscaleEffect.hpp" />
+    <ClInclude Include="HighContrastEffect.hpp" />
     <ClInclude Include="ImageEffect.hpp" />
     <ClInclude Include="NegateBlueEffect.hpp" />
     <ClInclude Include="NegateGreenEffect.hpp" />
@@ -288,6 +290,7 @@
     <ClInclude Include="Pixel.hpp" />
     <ClInclude Include="PpmDocument.hpp" />
     <ClInclude Include="PpmWindow.hpp" />
+    <ClInclude Include="RandomNoiseEffect.hpp" />
     <ClInclude Include="RemoveBlueEffect.hpp" />
     <ClInclude Include="RemoveGreenEffect.hpp" />
     <ClInclude Include="RemoveRedEffect.hpp" />

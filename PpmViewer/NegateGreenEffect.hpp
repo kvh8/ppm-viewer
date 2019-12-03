@@ -11,7 +11,7 @@ public:
 			for (int j = 0; j < doc.getWidth(); j++)
 			{
 				Pixel& p = doc[i][j];
-				p.red = (255 - p.red);
+				p.green = (255 - p.green);
 
 				//not necessary as we're using references but it makes our intent more clear
 				doc[i][j] = p;
